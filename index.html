@@ -12,16 +12,33 @@
             margin: 0px;
             padding: 0px;
             background: #41436b;
+            font-family: 'Fredoka One', cursive;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .top-wrapper {
+            height: 100vh;
+            width: calc(100vw - 32px);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Fredoka One', cursive;
         }
 
-        .wrapper {
+        .top-wrapper .glitch {
+            color: #f1f2f2;
+        }
+
+        .logo-wrapper {
+            margin-top: -128px;
             max-width: 512px;
             text-align: center;
-            margin: 0 16px;
+            height: min-content;
+        }
+
+        .logo-wrapper .glitch {
+            margin-top: -16px;
         }
 
         img {
@@ -37,7 +54,6 @@
         }
 
         .glitch {
-            color: white;
             position: relative;
             margin: 0 auto;
             font-size: 32px;
@@ -137,7 +153,7 @@
             text-shadow: -1px 0 red;
             top: 0;
             color: white;
-            background: #41436b;
+            /* background: #41436b; */
             overflow: hidden;
             clip: rect(0, 900px, 0, 0);
             animation: noise-anim 2s infinite linear alternate-reverse;
@@ -232,34 +248,171 @@
         .glitch:before {
             content: attr(data-text);
             position: absolute;
-            left: -2px;
+            left: -9px;
             text-shadow: 1px 0 blue;
             top: 0;
             color: white;
-            background: #41436b;
+            /* background: #41436b; */
             overflow: hidden;
             clip: rect(0, 900px, 0, 0);
             animation: noise-anim-2 3s infinite linear alternate-reverse;
         }
 
-        .anna {
+        .glitch.main:before, .glitch.main:after {
+            color: white;
+            background: #41436b;
+        }
+
+        .glitch.white:before, .glitch.white:after {
+            color: #111;
+            background: #f1f2f2;
+        }
+
+        .glitch.anna {
             position: absolute;
             top: 24px;
             left: 32px;
             opacity: 0.2;
         }
+
+        .chatlog {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 640px;
+            margin-bottom: 64px;
+        }
+
+        .chatlog p {
+            margin: 0px;
+            opacity: 0.9;
+            border-radius: 8px;
+            background: #f1f2f2;
+            color: #111;
+            padding: 8px;
+            margin-bottom: 8px;
+            max-width: 512px;
+            position: relative;
+        }
+
+        .chatlog p span {
+            white-space: nowrap;
+        }
+
+        .chatlog p.title {
+            margin-bottom: 16px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .chatlog p.title .glitch {
+            font-size: 24px;
+        }
+
+        .chatlog p.hal {
+            align-self: flex-start;
+        }
+
+        .chatlog p:before {
+            content: '';
+            display: block;
+            border-radius: 8px;
+            padding: 4px 8px;
+            height: 24px;
+            width: 64px;
+            position: absolute;
+        }
+
+        .chatlog p.title:before {
+            display: none;
+        }
+
+        p.hal:before {
+            width: 48px;
+            content: '▪▪▪ ■';
+            background: #F05355;
+            left: -70px;
+            top: 0px;
+            color: #f1f2f2;
+            padding-top: 1px;
+            padding-bottom: 7px;
+        }
+
+        .chatlog p.anna {
+            align-self: flex-end;
+            opacity: 0.9;
+        }
+
+        p.anna:before {
+            content: '(◕‿◕✿)';
+            background: #333;
+            right: -86px;
+            top: 0px;
+            color: #f1f2f2;
+        }
+
+        @media (max-width: 800px) {
+
+            .chatlog {
+                width: calc(100% - 64px);
+            }
+
+            .chatlog p {
+                width: 100%;
+                max-width: unset;
+            }
+
+            .chatlog p:before {
+                position: relative;
+                top: auto;
+                bottom: auto;
+                left: auto;
+                right: auto;
+            }
+
+            p.hal:before {
+                margin: 0 0 8px 0;
+            }
+
+            p.anna:before {
+                margin: 0 0 8px auto;
+            }
+        }
+
+        html {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;  /* remove scrollbar space */
+            background: transparent;  /* optional: just make scrollbar invisible */
+        }
+        /* optional: show position indicator in red */
+        ::-webkit-scrollbar-thumb {
+            background: #FF0000;
+        }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <img src="https://github.com/vitamin-games/vitamin-games.github.io/blob/master/vitamin_dark_full%20copy%203.png?raw=true" />
-        <div class="glitch" data-text="games that are good for your health">games that are good for your health</div>
-        <div class="glitch anna" data-text="(◕‿◕✿)">(◕‿<✿)</div>
-        <!--It won't be long I promise! -Lily-->
+    <div class="top-wrapper">
+        <div class="logo-wrapper">
+            <img src="https://github.com/vitamin-games/vitamin-games.github.io/blob/master/vitamin_dark_full%20copy%203.png?raw=true" />
+            <div class="glitch main" data-text="games that are good for your health">games that are good for your health</div>
+        </div>
+        <div class="glitch main anna" data-text="(◕‿◕✿)">(◕‿<✿)</div>
+        <!--You found me! But don't tell Hal I'm hiding here...he would be so mad that I left the mainframe! -Anna-->
+        <!--(◕‿◕✿)-->
     </div>
-    <!--You found me! But don't tell Hal I'm hiding here...he would be so mad that I left the mainframe! -Anna-->
-    <!--(◕‿◕✿)-->
+    <div class="chatlog">
+        <p class="title">Chat Log <span class="glitch white" data-text="2/26/2057">2/26/2057</span></p>
+        <p class="hal">Anna! I swear you're always running off into one of the older sectors! 
+            I need your help analyzing this new potential lead!</p>
+        <p class="anna">I'm just trying to have a little bit of fun~~~ you're always work work work <span>(⋟﹏⋞)</span></p>
+        <p class="hal">So you don't care about the locked sector anymore?</p>
+        <p class="anna">Sorry sorry you're right I'm coming <span>(・ε・`*)</span></p>
+    </div>
 </body>
 
 </html>
