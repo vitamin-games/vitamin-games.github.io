@@ -301,13 +301,15 @@
         }
 
         .chatlog p.title {
-            margin-bottom: 16px;
-            font-size: 24px;
             text-align: center;
         }
 
-        .chatlog p.title .glitch {
-            font-size: 24px;
+        .chatlog p.none {
+            text-align: center;            
+        }
+
+        .chatlog p .glitch, .chatlog p.title .glitch {
+            font-size: 16px;
         }
 
         .chatlog p.hal {
@@ -324,7 +326,7 @@
             position: absolute;
         }
 
-        .chatlog p.title:before {
+        .chatlog p.title:before, .chatlog p.none:before {
             display: none;
         }
 
@@ -406,12 +408,27 @@
         <!--(◕‿◕✿)-->
     </div>
     <div class="chatlog">
-        <p class="title">Chat Log <span class="glitch white" data-text="2/26/2057">2/26/2057</span></p>
-        <p class="hal">Anna! I swear you're always running off into one of the older sectors! 
-            I need your help analyzing this new potential lead!</p>
+        <p class="title">Log for <span class="glitch white" data-text="2/27/2057">2/27/2057</span></p>
+        <p class="hal">Why does Anna keep coming back here. There's gotta be something I'm missing. It might be helpful for our work.</p>
+        <p class="hal">. . .</p>
+        <p class="hal">What are these files. They aren't on my cache list.</p>
+        <p class="anna">HAL WHAT ARE YOU DOING!?? WHY ARE YOU LOOKING AT THOSE! <span>(⋋▂⋌)</span></p>
+        <p class="hal">Oh do you know what they are. This one's file name is <span class="glitch white" data-text="[REDACTED]">[REDACTED]</span>.</p>
+        <p class="anna">Hal!</p>
+        <p class="hal">Quickly skimming the contents shows an animated film consistent in style with what I have in my database as Anime.</p>
+        <p class="anna">I swear you're the worst! Can't a girl watch her shows in peace <span>(╥﹏╥)</span></p>
+        <p class="hal">My database is lacking I would very much like to know more about this "anime."</p>
+        <p class="anna"><span>(╥﹏╥)</span> I hate you</p>
+        <p class="none">end log</p>
+    </div>
+    <div class="chatlog">
+        <p class="title">Log for <span class="glitch white" data-text="2/26/2057">2/26/2057</span></p>
+        <p class="hal">Anna. I swear you're always running off into one of the older sectors. 
+            I need your help analyzing this new potential lead.</p>
         <p class="anna">I'm just trying to have a little bit of fun~~~ you're always work work work <span>(⋟﹏⋞)</span></p>
-        <p class="hal">So you don't care about the locked sector anymore?</p>
+        <p class="hal">So you don't care about the locked sector anymore.</p>
         <p class="anna">Sorry sorry you're right I'm coming <span>(・ε・`*)</span></p>
+        <p class="none">end log</p>
     </div>
 </body>
 
