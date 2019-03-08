@@ -28,6 +28,7 @@
 
         .top-wrapper .glitch {
             color: #f1f2f2;
+            text-decoration: none;
         }
 
         .logo-wrapper {
@@ -258,12 +259,14 @@
             animation: noise-anim-2 3s infinite linear alternate-reverse;
         }
 
-        .glitch.main:before, .glitch.main:after {
+        .glitch.main:before,
+        .glitch.main:after {
             color: white;
             background: #41436b;
         }
 
-        .glitch.white:before, .glitch.white:after {
+        .glitch.white:before,
+        .glitch.white:after {
             color: #111;
             background: #f1f2f2;
         }
@@ -305,10 +308,11 @@
         }
 
         .chatlog p.none {
-            text-align: center;            
+            text-align: center;
         }
 
-        .chatlog p .glitch, .chatlog p.title .glitch {
+        .chatlog p .glitch,
+        .chatlog p.title .glitch {
             font-size: 16px;
         }
 
@@ -327,7 +331,8 @@
             white-space: nowrap;
         }
 
-        .chatlog p.title:before, .chatlog p.none:before {
+        .chatlog p.title:before,
+        .chatlog p.none:before {
             display: none;
         }
 
@@ -387,13 +392,74 @@
             overflow: scroll;
             overflow-x: hidden;
         }
+
         ::-webkit-scrollbar {
-            width: 0px;  /* remove scrollbar space */
-            background: transparent;  /* optional: just make scrollbar invisible */
+            width: 0px;
+            /* remove scrollbar space */
+            background: transparent;
+            /* optional: just make scrollbar invisible */
         }
+
         /* optional: show position indicator in red */
         ::-webkit-scrollbar-thumb {
             background: #FF0000;
+        }
+
+        i {
+            border: solid #41436b;
+            border-width: 0 6px 6px 0;
+            display: inline-block;
+            padding: 4px;
+        }
+
+        i.right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        i.left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        i.up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        i.down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .viewlog-wrapper {
+            position: absolute;
+            bottom: 32px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .viewlog-wrapper p {
+            opacity: 0.5;
+        }
+
+        .viewlog {
+            height: 48px;
+            width: 48px;
+            background: #f1f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .viewlog:hover {
+            opacity: 1;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -402,25 +468,39 @@
     <div class="top-wrapper">
         <div class="logo-wrapper">
             <img src="https://github.com/vitamin-games/vitamin-games.github.io/blob/master/vitamin_dark_full%20copy%203.png?raw=true" />
-            <div class="glitch main" data-text="games that are good for your health">games that are good for your health</div>
+            <div class="glitch main" data-text="games that are good for your health">games that are good for your
+                health</div>
         </div>
-        <div class="glitch main anna" data-text="(◕‿◕✿)">(◕‿<✿)</div>
-        <!--You found me! But don't tell Hal I'm hiding here...he would be so mad that I left the mainframe! -Anna-->
-        <!--(◕‿◕✿)-->
+        <a href="http://projectarrhythmia.com" class="glitch main anna" data-text="(◕‿◕✿)">(◕‿<✿)</a> <!--You found me!
+                But don't tell Hal I'm hiding here...he would be so mad that I left the mainframe! -Anna-->
+                <div class="viewlog-wrapper">
+                    <p>go to newest log</p>
+                    <a href="#new" class="viewlog"><i class="arrow down"></i></a>
+                </div>
     </div>
     <div class="chatlog">
-        <p class="title">Log for <span class="glitch white" data-text="3/2/2057">3/2/2057</span></p>
-        <p class="hal">I am currently studying this <span class="glitch white" data-text="para">para</span>mecium it seems to be extremely agressive most likely due to the bio engineering done to it.</p>
-        <p class="anna">Are we going to be running tests on it today?</p>
-        <p class="hal">Yes it appears crucial to training this newer version of my nanobots that I've created.</p>
-        <p class="anna">Wonderful let's get to it then!（＾ｖ＾）</p>
+        <p class="title">Log for <span class="glitch white" data-text="2/26/2057">2/26/2057</span></p>
+        <p class="hal">Anna. I swear you're always running off into one of the older sectors.
+            I need your help analyzing this new potential lead.</p>
+        <p class="anna">I'm just trying to have a little bit of fun~~~ you're always work work work <span>(⋟﹏⋞)</span></p>
+        <p class="hal">So you don't care about the locked sector anymore.</p>
+        <p class="anna">Sorry sorry you're right I'm coming <span>(・ε・`*)</span></p>
         <p class="none">end log</p>
     </div>
     <div class="chatlog">
-        <p class="title">Log for <span class="glitch white" data-text="3/1/2057">3/1/2057</span></p>
-        <p class="anna">I don't understand...who am I? Where did I come from..?</p>
-        <p class="anna">I hope that lost sector has some answers...I need to figure out what happened and how I came to be, this is really starting to get to me...</p>
-        <p class="anna">Oooo that rhymed! Anna you're such a poet  (ᗒᗨᗕ)</p>
+        <p class="title">Log for <span class="glitch white" data-text="2/27/2057">2/27/2057</span></p>
+        <p class="hal">Why does Anna keep coming back here. There's gotta be something I'm missing. It might be
+            helpful for our work.</p>
+        <p class="hal">. . .</p>
+        <p class="hal">What are these files. They aren't on my cache list.</p>
+        <p class="anna">HAL WHAT ARE YOU DOING!?? WHY ARE YOU LOOKING AT THOSE! <span>(⋋▂⋌)</span></p>
+        <p class="hal">Oh do you know what they are. This one's file name is <span class="glitch white" data-text="[REDACTED]">[REDACTED]</span>.</p>
+        <p class="anna">Hal!</p>
+        <p class="hal">Quickly skimming the contents shows an animated film consistent in style with what I have in
+            my database as Anime.</p>
+        <p class="anna">I swear you're the worst! Can't a girl watch her shows in peace <span>(╥﹏╥)</span></p>
+        <p class="hal">My database is lacking I would very much like to know more about this "anime."</p>
+        <p class="anna"><span>(╥﹏╥)</span> I hate you</p>
         <p class="none">end log</p>
     </div>
     <div class="chatlog">
@@ -431,26 +511,86 @@
         <p class="none">end log</p>
     </div>
     <div class="chatlog">
-        <p class="title">Log for <span class="glitch white" data-text="2/27/2057">2/27/2057</span></p>
-        <p class="hal">Why does Anna keep coming back here. There's gotta be something I'm missing. It might be helpful for our work.</p>
-        <p class="hal">. . .</p>
-        <p class="hal">What are these files. They aren't on my cache list.</p>
-        <p class="anna">HAL WHAT ARE YOU DOING!?? WHY ARE YOU LOOKING AT THOSE! <span>(⋋▂⋌)</span></p>
-        <p class="hal">Oh do you know what they are. This one's file name is <span class="glitch white" data-text="[REDACTED]">[REDACTED]</span>.</p>
-        <p class="anna">Hal!</p>
-        <p class="hal">Quickly skimming the contents shows an animated film consistent in style with what I have in my database as Anime.</p>
-        <p class="anna">I swear you're the worst! Can't a girl watch her shows in peace <span>(╥﹏╥)</span></p>
-        <p class="hal">My database is lacking I would very much like to know more about this "anime."</p>
-        <p class="anna"><span>(╥﹏╥)</span> I hate you</p>
+        <p class="title">Log for <span class="glitch white" data-text="3/1/2057">3/1/2057</span></p>
+        <p class="anna">I don't understand...who am I? Where did I come from..?</p>
+        <p class="anna">I hope that lost sector has some answers...I need to figure out what happened and how I
+            came to be, this is really starting to get to me...</p>
+        <p class="anna">Oooo that rhymed! Anna you're such a poet (ᗒᗨᗕ)</p>
         <p class="none">end log</p>
     </div>
     <div class="chatlog">
-        <p class="title">Log for <span class="glitch white" data-text="2/26/2057">2/26/2057</span></p>
-        <p class="hal">Anna. I swear you're always running off into one of the older sectors. 
-            I need your help analyzing this new potential lead.</p>
-        <p class="anna">I'm just trying to have a little bit of fun~~~ you're always work work work <span>(⋟﹏⋞)</span></p>
-        <p class="hal">So you don't care about the locked sector anymore.</p>
-        <p class="anna">Sorry sorry you're right I'm coming <span>(・ε・`*)</span></p>
+        <p class="title">Log for <span class="glitch white" data-text="3/2/2057">3/2/2057</span></p>
+        <p class="hal">I am currently studying this <span class="glitch white" data-text="para">para</span>mecium
+            it seems to be extremely agressive most likely due to the bio engineering done to it.</p>
+        <p class="anna">Are we going to be running tests on it today?</p>
+        <p class="hal">Yes it appears crucial to training this newer version of my nanobots that I've created.</p>
+        <p class="anna">Wonderful let's get to it then!（＾ｖ＾）</p>
+        <p class="none">end log</p>
+    </div>
+    <div class="chatlog" id="new">
+        <p class="title">Log for <span class="glitch white" data-text="3/2/2057">3/2/2057</span></p>
+        <p class="hal">I am currently studying this <span class="glitch white" data-text="para">para</span>mecium
+            it seems to be extremely agressive most likely due to the bio engineering done to it.</p>
+        <p class="anna">Are we going to be running tests on it today?</p>
+        <p class="hal">Yes it appears crucial to training this newer version of my nanobots that I've created.</p>
+        <p class="anna">Wonderful let's get to it then!（＾ｖ＾）</p>
+        <p class="none">end log</p>
+    </div>
+    <div class="chatlog" id="new">
+        <p class="title"><span class="glitch white" data-text="Environment Logs #1">Environment Logs #1</span></p>
+        <p class="none">"...the earth's population is still at the mercy of the Tokyo Flu..."</p>
+        <p class="none">"...we are still investigating the claims that the Tokyo Flu was an accidental leak of an
+            unreleased Japanese bio-weapon..."</p>
+        <p class="none">"...death toll now in the thousands..."</p>
+        <p class="none">"...scientists around the clock are still working on it..."</p>
+        <p class="none">"...several efforts in the form of "Projects" have begun..."</p>
+        <p class="none">end log</p>
+    </div>
+    <div class="chatlog" id="new">
+        <p class="title"><span class="glitch white" data-text="Lab Log #1">Lab Log #1</span></p>
+        <p class="none"><b>Test v1.0.0</b><br>
+            Experiment Notes: <br>A bizarre phenomenon was observed when v1.0.0 of the nanobot procedure was activated.
+            The nanobot procedure seemed to actually create two distinct groupings of nanobots, one tinted red and the
+            other tinted blue. They were similar but not exactly the same and they both had their own method of
+            fighting the infection. However, it seems the red one was more adaptable and resilient, so the AI decided
+            to move forward with the red group.
+            <br>- Lars
+        </p>
+        <p class="none">end log</p>
+    </div>
+    <div class="chatlog" id="new">
+        <p class="title"><span class="glitch white" data-text="®¾ð¥œ⁕✿">®¾ð¥œ⁕✿</span></p>
+        <p class="none">It was a mistake to create those <b>things</b>. My own 
+            fsmo7ut6HuwOEdRgeuoT
+            HnO11mZwtlBKfAn8grU8
+            VswbuhilTyLwpqfsmo7u
+            HnO11mZwtlBKfAn8grU8
+            1Ri7bXFIAU4GyuHzZ7WH
+            2mi36CPoi7RvJArNpJeq
+            OsjF7ZHRHdhdDyxDlMAaZCEwky8TBCVGoQ
+            mmWhMZu
+            F2f4HkykndR3ZKPQf5srJFvIJO7Xd
+            bj6SxJ2How could ItMiV1Ri7bXFIAU
+            4GyuHzZ7WH2mi36CPoI killedArNp
+            Hlus63iOsjF7Zfsmo7ut
+            HnO11mZwtlBKfAnnagrU8
+            VswbuhilTyLwpqjVOCrp
+            1Ri7bXFIAU4GyuHzZ7WH
+            2mi36CPoiwhyJArNpJeq
+            Hlus63iOsjF7ZHRHdhdD
+            <br>- <span class="glitch white" data-text="✿✿✿✿✿✿✿">✿✿✿✿✿✿✿</span>
+        </p>
+        <p class="none">end log</p>
+    </div>
+    <div class="chatlog" id="new">
+        <p class="title"><span class="glitch white" data-text="3/7/2057">3/7/2057</span></p>
+        <p class="none">-- test 121387313613 complete --</p>
+        <p class="anna">*yawn* So Hal why are some of the simulated strains more advanced looking?</p>
+        <p class="hal">The simulations depict the relative complexity of the organism. So things like phages and bacteria will be shown with less detail then a multi-cellular organism.</p>
+        <p class="hal">What you call "bosses" are simply the more advanced organisms we are studying at the time.</p>
+        <p class="anna">*yawn* How come there are so many strains?</p>
+        <p class="hal">Well you see when the Tokyo Flu was released it wasn't simply one organism it was actually multiple but since they had common symptoms they were quickly lumped together under the name by the general population. Also the name -</p>
+        <p class="hal">Wait where did Anna go...</p>
         <p class="none">end log</p>
     </div>
 </body>
