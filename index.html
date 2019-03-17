@@ -320,6 +320,13 @@
             text-align: center;
         }
 
+        .chatlog p.spaces {
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
         .chatlog p .glitch,
         .chatlog p.title .glitch {
             font-size: 16px;
@@ -403,15 +410,15 @@
         }
 
         ::-webkit-scrollbar {
-            width: 0px;
+            width: 8px;
             /* remove scrollbar space */
-            background: transparent;
+            background: #f2f2f2;
             /* optional: just make scrollbar invisible */
         }
 
         /* optional: show position indicator in red */
         ::-webkit-scrollbar-thumb {
-            background: #FF0000;
+            background: #333333;
         }
 
         i {
@@ -536,7 +543,7 @@
         <p class="anna">Wonderful let's get to it then!（＾ｖ＾）</p>
         <p class="none">end log</p>
     </div>
-    <div class="chatlog" id="new">
+    <div class="chatlog">
         <p class="title"><span class="glitch white delay2" data-text="Environment Logs #1">Environment Logs #1</span></p>
         <p class="none">"...the earth's population is still at the mercy of the Tokyo Flu..."</p>
         <p class="none">"...we are still investigating the claims that the Tokyo Flu was an accidental leak of an
@@ -546,7 +553,7 @@
         <p class="none">"...several efforts in the form of "Projects" have begun..."</p>
         <p class="none">end log</p>
     </div>
-    <div class="chatlog" id="new">
+    <div class="chatlog">
         <p class="title"><span class="glitch white delay1" data-text="Lab Log #1">Lab Log #1</span></p>
         <p class="none"><b>Test v1.0.0</b><br>
             Experiment Notes: <br>A bizarre phenomenon was observed when v1.0.0 of the nanobot procedure was activated.
@@ -558,7 +565,7 @@
         </p>
         <p class="none">end log</p>
     </div>
-    <div class="chatlog" id="new">
+    <div class="chatlog">
         <p class="title"><span class="glitch white" data-text="®¾ð¥œ⁕✿">®¾ð¥œ⁕✿</span></p>
         <p class="none">It was a mistake to create those <b>things</b>. My own 
             <span class="glitch white delay1" data-text="fsmo7ut6HuwOEdRgeuoT">fsmo7ut6Huw OEdRgeuoT</span>
@@ -585,7 +592,7 @@
         </p>
         <p class="none">end log</p>
     </div>
-    <div class="chatlog" id="new">
+    <div class="chatlog">
         <p class="title"><span class="glitch white delay2" data-text="3/7/2057">3/7/2057</span></p>
         <p class="none">-- test 121387313613 complete --</p>
         <p class="anna">*yawn* So Hal why are some of the simulated strains more advanced looking?</p>
@@ -594,6 +601,22 @@
         <p class="anna">*yawn* How come there are so many strains?</p>
         <p class="hal">Well you see when the Tokyo Flu was released it wasn't simply one organism it was actually multiple but since they had common symptoms they were quickly lumped together under the name by the general population. Also the name -</p>
         <p class="hal">Wait where did Anna go...</p>
+        <p class="none">end log</p>
+    </div>
+    <div class="chatlog" id="new">
+        <p class="title"><span class="glitch white delay2" data-text="DB Log #1">DB Log #1</span></p>
+        <p class="none spaces">SELECT COUNT(*) as "total" from test_subjects</p>
+        <p class="none spaces"> --------- <br/>|  total  |<br/>|---------|<br/>|  116923 |<br/> --------- </p>
+        <p class="none spaces">SELECT COUNT(*) as "total" from test_subjects WHERE test_subjects."profile" -> 'status' #>> '{}' = 'DECEASED'</p>
+        <p class="none spaces"> --------- <br/>|  total  |<br/>|---------|<br/>|   80147 |<br/> --------- </p>
+        <p class="none">end log</p>
+    </div>
+    <div class="chatlog" id="new">
+        <p class="title"><span class="glitch white delay3" data-text="DB Log #2">DB Log #2</span></p>
+        <p class="none spaces">SELECT COUNT(*) as "total" from test_subjects WHERE test_subjects."profile" -> 'name' -> 'first_name' #>> '{}' = 'anna'</p>
+        <p class="none spaces"> --------- <br/>|  total  |<br/>|---------|<br/>|     147 |<br/> --------- </p>
+        <p class="none spaces">SELECT COUNT(*) as "total" from test_subjects WHERE test_subjects."profile" -> 'status' #>> '{}' = 'UNKNOWN' AND test_subjects."profile" -> 'name' -> 'first_name' #>> '{}' = 'anna'</p>
+        <p class="none spaces"> --------- <br/>|  total  |<br/>|---------|<br/>|       2 |<br/> --------- </p>
         <p class="none">end log</p>
     </div>
 </body>
