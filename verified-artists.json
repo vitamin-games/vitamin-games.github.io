@@ -1,0 +1,16 @@
+{
+  "verified": [
+    {
+      "type": "artist",
+      "name": "Shirobon",
+      "info": "This is an official PA artist, so no limits."
+    }
+  ],
+  "not-verified": [
+    {
+      "type": "label",
+      "name": "Monstercat",
+      "info": ""
+    }
+  ]
+}
